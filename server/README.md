@@ -28,5 +28,4 @@ Apollo Server is an open-source GraphQL server that's compatible with any GraphQ
 
 ### Step7: Start the server
   > npm start
-   
 
