@@ -29,3 +29,73 @@ Apollo Server is an open-source GraphQL server that's compatible with any GraphQ
 ### Step7: Start the server
   > npm start
 
+
+## APIS defined in this project
+
+1. SignUp API
+
+### Example:
+### Invoke API from GaphQL Server
+
+mutation SignUpUser($SignUpUserinput : SignUpUserinput!){
+  signUpUser(input: $SignUpUserinput){
+    username
+    firstname
+    lastname
+    age
+    email
+  }
+}
+
+### Input
+
+{
+  "SignUpUserinput": {
+    "username": "DM",
+    "firstname": "Dhanya",
+    "lastname": "M",
+    "age": null,
+    "email": "dm@gmail.com",
+    "password": "123456"
+  }
+}
+
+
+2. Fetch All Users API
+
+### Example: 
+
+### Invoke Fetch All Users from GraphQL Server
+
+query GetAllUsers{
+  users {
+    username
+    firstname
+    lastname
+    age
+    email
+  }
+}
+
+
+3. Fetch Specific User API
+
+### Example:
+
+### Invoke Fetch Specific User from GraphQL
+
+query GetUser($userId: ID!){
+ user(id: $userId) {
+   username
+   firstname
+   lastname
+   age
+   email
+ }
+}
+
+### Input
+
+{
+  "userId": 100
+}
